@@ -15,19 +15,6 @@
             <button id="toggleGateOff">FERMER LE PORTAIL</button>
         </div>
     </div>
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                // L'enregistrement a réussi
-                console.log('ServiceWorker enregistré avec succès avec la portée: ', registration.scope);
-            }, function(err) {
-                // L'enregistrement a échoué
-                console.log('L’enregistrement du ServiceWorker a échoué: ', err);
-            });
-        });
-    }
-</script>
     <script src="action.js"></script>
 </body>
 </html>
