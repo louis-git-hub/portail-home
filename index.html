@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commande Portail</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        #page,button{font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;font-size:x-large}
+        #page{width:1000px;margin:auto;color:#f8fdff}
+        body{background-color:#161b1f}
+        button{background-color:#fff;font-weight:700;border-radius:7px}
+    </style>
 </head>
 <body>
     <div id="page">
@@ -15,6 +20,9 @@
             <button id="toggleGateOff">FERMER LE PORTAIL</button>
         </div>
     </div>
-    <script src="action.js"></script>
+    <script>
+        document.getElementById("toggleGate").addEventListener("click",function(){fetch("https://php.databeam.eu/tuya/garage.php/on")});
+        document.getElementById("toggleGateOff").addEventListener("click",function(){fetch("https://php.databeam.eu/tuya/garage.php/off")});
+    </script>
 </body>
 </html>
